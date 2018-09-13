@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>秒杀列表页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入 Bootstrap -->
+    <link href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h2>秒杀列表</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover" id="list_table">
+                <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>数量</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>状态</th>
+                    <th>详情</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- 模态框 -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+
+                <!-- 模态框主体 -->
+                <div class="modal-body">未登录，无法进行秒杀，请立即登录</div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="toLogin" type="button" class="btn btn-primary">去登录</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../static/jquery.min.js"></script>
+<script src="../static/jquery.cookie.min.js"></script>
+<script src="../static/bootstrap.min.js"></script>
+
+<script src="../js/list.js"></script>
+
+</html>

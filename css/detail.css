@@ -1,0 +1,76 @@
+html,body {
+    height: 100%;
+    background-color: #f7f9fb;
+}
+
+.contend{
+    width:1000px;
+    height: 450px;
+    margin: 70px auto;
+}
+.contend .left{
+    width: 450px;
+    height: 450px;
+    float: left;
+}
+.contend .left .left-photo{
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contend .right{
+    width: 450px;
+    height: 450px;
+    float: right;
+}
+.contend .right .time-text{
+    width: 450px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+.contend .right .time-logo{
+    width: 500px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+.contend .right .time-logo .count-down{
+    color: red;
+    width: 500px;
+}
+
+.contend .right .info{
+    margin-top: 20px;
+    height: 150px;
+}
+.contend .right .info .name{
+    font-size: 40px;
+}
+.contend .right .info span{
+    color: red;
+    font-size: 16px;
+}
+.contend .right .info h3{
+    line-height: 50px;
+}
+.contend .right .action{
+    height: 100px;
+}
+.contend .right .action .price{
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+}
+.contend .right .action .price .span-one{
+    font-size: 30px;
+    color: red;
+}
+.contend .right .action .price .span-two{
+    text-decoration: line-through;
+}

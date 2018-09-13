@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秒杀页面</title>
+    <link href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default" role="navigation"> 
+        <div class="container-fluid"> 
+            <div class="navbar-header"> 
+                <span class="navbar-brand" id="userName"></span>
+            </div> 
+            <ul class="nav navbar-nav navbar-right"> 
+                <li id="login"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+            </ul>
+            <ul class="nav navbar-nav navbar-right"> 
+                <li id="out"><a href="#"><span class="glyphicon glyphicon-log-in"></span> 退出登录</a></li> 
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="order"><a href="order.html"><span class="glyphicon glyphicon-log-in"></span> 我的订单</a></li> 
+            </ul> 
+            
+        </div> 
+    </nav>
+
+
+    <div class="contend">
+        <div class="left">
+            <div class="left-photo" id="image">
+
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="time-text">
+            </div>
+            <div class="time-logo">
+                <div id="timer" class="count-down" >
+
+                </div>
+            </div>
+            <div class="info">
+                <div id="title" class="name"></div>
+                <span id="description"></span>
+                
+            </div>
+            <div class="action">
+
+                <div class="price">
+                    秒杀价:&nbsp;&nbsp;<span class="span-one" >&yen; <span id="seckillprice"></span>&nbsp;&nbsp;&nbsp;</span>[<span class="span-two" >&yen;<span id="oldprice"></span></span>]
+                </div>
+
+
+            </div>
+            <button type="button" id="seckillBtn" class="btn btn-primary btn-lg" disabled="true">立即秒杀</button>
+        </div>
+    </div>
+
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- 模态框头部 -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+
+                <!-- 模态框主体 -->
+                <div class="modal-body"></div>
+
+                <div class="modal-footer" hidden="true">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="toLogin" type="button" class="btn btn-primary">去登录</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/jquery.cookie.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+
+    <script type = "text/javascript" src = "../js/detail.js"></script>
+
+    
+
+</html>

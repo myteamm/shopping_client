@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>订单页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入 Bootstrap -->
+    <link href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h2>订单</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover" id="list_table">
+                <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>商品</th>
+                    <th>秒杀价</th>
+                    <th>原价</th>
+                    <th>秒杀时间</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../static/jquery.min.js"></script>
+<script src="../static/jquery.cookie.min.js"></script>
+<script src="../static/bootstrap.min.js"></script>
+
+<script src="../js/order.js"></script>
+
+</html>
