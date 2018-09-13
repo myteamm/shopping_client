@@ -4,6 +4,10 @@ $(document).ready(function() {
 
 		var userName = $.cookie('userName');
 
+		if (jQuery.isEmptyObject(userName)) {
+			$('#myModal').modal('show');
+		}
+
 		$.ajax({
 			url: "http://39.108.238.18:8080/shopping/order/" + userName + "/list",
 			//url: "http://localhost:8080/shopping/order/" + userName + "/list",
@@ -32,5 +36,9 @@ $(document).ready(function() {
 
 		});
 	});
+
+	$("#toLogin").click(function() {
+		$(location).attr('href', 'login.html')
+	})
 
 });
